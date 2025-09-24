@@ -1,0 +1,23 @@
+{
+  "name": "site-4",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carrexa645-arch/site3.git"
+  },
+  "author": "Kirill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carrexa645-arch/site3/issues"
+  },
+  "homepage": "https://github.com/carrexa645-arch/site3#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0",
+    "sass": "^1.93.2"
+  }
+}
