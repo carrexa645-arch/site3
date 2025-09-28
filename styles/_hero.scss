@@ -1,0 +1,139 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+@use "sass:color";
+
+.hero {
+  position: relative;
+  max-width: 1260px;
+  height: 830px;
+  margin: 0 auto;
+  padding: 140px 0 0 0;
+  background: url("../assets/img/cloud.png") center/contain no-repeat;
+
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__title {
+    @include m.font(110px, 700, v.$co_black);
+    line-height: 1;
+  }
+
+  &__action-btn {
+    width: 380px;
+    height: 80px;
+    border-radius: 45px;
+    background-color: v.$co_black;
+    border: none;
+    cursor: pointer;
+    @include m.font(28px, 500, v.$co_white);
+    @include m.position(absolute, 1, -1, bottom, right, 15px, 0px);
+
+    &:hover {
+      background-color: color.adjust(v.$co_black, $alpha: -0.35);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid v.$co_white;
+    }
+  }
+
+  &__notify {
+    position: relative;
+    margin: 170px auto 0;
+    width: 690px;
+    height: 60px;
+    background-color: color.adjust(v.$co_white, $alpha: -0.85);
+    border-radius: 20px;
+    @include m.d-flex(end, center, nowrap, row, 10px);
+
+    &-img {
+      @include m.position(absolute, 1, -1, top, left, -75px, -35px);
+    }
+
+    &-content {
+      width: 470px;
+      height: 100%;
+      text-transform: uppercase;
+      @include m.d-flex(center, center, nowrap);
+      @include m.font(14px, 400, v.$co_black);
+      border-right: 1px solid color.adjust(v.$co_white, $alpha: -0.7);
+      line-height: 1;
+    }
+
+    &-btn {
+      width: 115px;
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      @include m.font(25px, 400, v.$co_black);
+      @extend %hover-light;
+      &:focus {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: 2px solid v.$co_white;
+        border-radius: 7px;
+      }
+    }
+  }
+
+  &__scroll {
+    @include m.position(absolute, 1, -1, bottom, left, 200px, 0px);
+
+    &-content {
+      position: relative;
+      @include m.font(16px, 500, v.$co_white);
+      writing-mode: vertical-rl;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        @include m.position(absolute, 1, -1, top, left, 100px, 6px);
+        display: block;
+        width: 1px;
+        height: 75px;
+        background-color: v.$co_white;
+      }
+    }
+    @media (max-width: v.$media_lg) {
+      @include m.position(absolute, 1, -1, bottom, left, 70px, 6px);
+    }
+  }
+  @media (max-width: v.$media_lg) {
+    .hero__content {
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+    }
+    .hero__title {
+      @include m.font(100px, 700, v.$co_black);
+    }
+    .hero__action-btn {
+      @include m.position(absolute, 1, -1, bottom, left, 0, 15px);
+    }
+  }
+  @media (max-width: v.$media_md) {
+    .hero__content {
+      max-width: 560px;
+      height: 500px;
+    }
+    .hero__title {
+      @include m.font(100px, 700, v.$co_black);
+    }
+    .hero__action-btn {
+      width: 260px;
+      height: 60px;
+      @include m.font(18px, 400, v.$co_white);
+    }
+  }
+  @media (max-width: v.$media_md) {
+    padding: 110px 15px 0;
+    background: url("../assets/img/cloud.png") 0 25%/contain no-repeat;
+  }
+}

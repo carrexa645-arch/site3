@@ -6,9 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"/>
-      <link rel="icon" href="assets/favicon.png" type="image/png">
-      <link rel="stylesheet" href="dist/index.css">
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="dist/index.css" />
     <title>Live Streaming</title>
   </head>
   <body>
@@ -31,7 +32,9 @@
           </div>
 
           <div class="nav__covid-wrapper covid">
-            <a href="#" class="covid__link" aria-label="covid update">COVID-19 UPDATE</a>
+            <a href="#" class="covid__link" aria-label="covid update"
+              >COVID-19 UPDATE</a
+            >
           </div>
 
           <div class="nav__globe-wrapper globe">
@@ -44,5 +47,37 @@
         </nav>
       </div>
     </header>
+
+    <main aria-label="main content">
+      <section class="hero-section" aria-label="hero section">
+        <div class="container">
+          <div class="hero">
+            <div class="hero__content">
+              <h1 class="hero__title">WHEN PERFORMANCE MATTERS</h1>
+              <button class="hero__action-btn">
+                Start development with us!
+              </button>
+            </div>
+
+            <div class="hero__notify">
+              <img
+                src="assets/favicon.png"
+                alt="pigeon img"
+                class="hero__notify-img"/>
+              <p class="hero__notify-content">
+                WE USE COOKIES TO ENSURE YOUR BEST EXPERIENCE. THROUGH YOUR
+                CONTINUED USE OF THIS SITE YOU ACCEPT THIS USE. FOR MORE
+                INFORMATION, PLEASE SEE OUR PRIVACY POLICY.
+              </p>
+              <button class="hero__notify-btn">ACCEPT</button>
+            </div>
+
+            <div class="hero__scroll">
+              <span class="hero__scroll-content">Scroll down</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
